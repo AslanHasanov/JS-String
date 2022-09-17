@@ -11,8 +11,17 @@
     <button id="modes" onclick="mode()">Dark mode</button> <br>
     <input id="group" type="text">
     <h1 id="g-name"> hello</h1>
-    <button onclick="get()">Enter</button>
+    <button id="btn" onclick="get()">Enter</button>
     
+    <script>
+        var input = document.getElementById("group");
+        input.addEventListener("keypress", function(event) {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("btn").click();
+          }
+        });
+        </script>
 
     <script src="JS/app.js"></script>
 </body>
