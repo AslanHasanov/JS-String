@@ -6,15 +6,30 @@ function get(){
     
     if(number==1){
         document.getElementById("g-name").style.color="bisque"
-        alert("seher")
+        alert("Morning groups")
     }
     else if(number==2){
         document.getElementById("g-name").style.color="yellow"
-        alert("gunorta")
+        alert("Afternoon groups")
     }
     else if(number==3){
-        document.getElementById("g-name").style.color="black"
-        alert("axsham")
+        if(document.body.style.backgroundColor=="black"){
+            document.getElementById("g-name").style.color="white"
+        }
+        else{
+            document.getElementById("g-name").style.color="black"
+        }
+        alert("Night groups")
     }
 
+}
+function mode(){
+    if(document.body.style.backgroundColor=="white"){
+        document.body.style.backgroundColor="black"
+        document.getElementById("modes").textContent="Light mode"
+    }
+    else{
+        document.body.style.backgroundColor="white"
+        document.getElementById("modes").textContent="Dark mode"
+    }
 }
